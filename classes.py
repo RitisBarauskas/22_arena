@@ -13,7 +13,8 @@ class Person:
         self.name = name
         self.hit_points = hit_points
         self.attack_damage = base_attack
-        self.base_protection = protection_percentage
+        self.base_protection = (protection_percentage
+                                if protection_percentage >= 0.1 else 0.1)
         self.things = []
 
     def set_things(self, things):
