@@ -5,6 +5,8 @@ THINGS = [
 "Щит 'Защита от дурацких решений'",
 ]
 
+NAMES = ["Трамп", "Илор Маск"]
+
 class Thing:
     def __init__(self, name, protection, attack, hp):
         self.name = name
@@ -17,7 +19,7 @@ class Person:
     def __init__(self, name, hit_points, base_attack, protection_percentage):
         self.name = name
         self.current_hit_points = self.hit_points
-        self.attack_damage = base_attack
+        self.base_attack = base_attack
         self.base_protection = protection_percentage
         self.things = []
 
