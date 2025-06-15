@@ -28,4 +28,3 @@ if __name__ == '__main__':
             print('Битва окончена, победитель определён!')
             break
     print(f'Новый чемпион - {arena.players[0].name} !')
-    time.sleep(5)
