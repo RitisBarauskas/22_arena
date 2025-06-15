@@ -37,6 +37,9 @@ class Person:
         """
         self.hit_points -= (damage - damage * self.get_final_protection())
         return self.hit_points
+    
+    def attack(self):
+        return self.attack_damage + sum(t.attack for t in self.things)
 
 
 class Paladin(Person):
