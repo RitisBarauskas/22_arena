@@ -16,4 +16,9 @@ class Arena:
         self.player1, self.player2 = choices(self.players, k=2)
 
     def make_move(self):
-        self.player1
+        self.player2.get_defence(self.player1)
+        if self.player2.hp_total > 0:
+            print(f'{self.player1.name} наносит удар {self.player2.name}, но {self.player2.name} устоял!')
+        else:
+            print(f'{self.player1.name} наносит сокрушительный удар {self.player2.name} и выводит его из боя!')
+            self.players.remove(self.player2)
