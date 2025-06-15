@@ -20,7 +20,9 @@ class Person:
         """
         Устанавливает список предметов, которые носит персонаж.
         """
-        pass
+        if len(things) > 4:
+            things = things[:4]
+        self.things = things.copy()
 
     def get_final_protection(self):
         """
