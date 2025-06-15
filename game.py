@@ -29,6 +29,7 @@ def generate_persons(count=10):
     persons = []
     for _ in range(count):
         name = random.choice(names)
+        names.remove(name)
         hp = random.randint(100, 150)
         protection = random.randint(1, 25) / 100
         attack = random.randint(1, 20)
@@ -67,7 +68,6 @@ def get_winner(persons):
                 persons.remove(person1)
                 break
             elif person2.hit_points <= 0:
-                # удалить персонажа из списка
                 print(f'Персонаж {person2.name} был убит {person1.name}! И выбыл с арены')
                 persons.remove(person2)
                 break
