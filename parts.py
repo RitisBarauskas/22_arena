@@ -20,6 +20,10 @@ class Person:
         """
         pass
 
+    def calculate_damage(self):
+      """Вычитания урона"""
+       pass
+
 
     def subtract_life(self, damage):
         """
