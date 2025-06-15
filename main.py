@@ -1,7 +1,9 @@
 import time
+from random import choice, randint
 
-from players import Person, Warrior, Paladin
+from players import Warrior, Paladin
 from arena import Arena
+from things import Thing
 
 PLAYERS_COUNT = 10
 PLAYERS_NAMES = (f'Player{i}'for i in range(1, 21))

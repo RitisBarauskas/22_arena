@@ -11,20 +11,21 @@ class Person:
         self.atack_total = self.atack
         self.defence_total = self.defence
 
-    def set_things(things):
-        self.things = things
+    def set_things(self, thing):
+        self.things += thing
 
     def set_total_skills(self):
         for thing in self.things:
-            self.hp_total = self.hp
-            self.atack_total = self.atack
-            self.defence_total = self.defence
+            self.hp_total += self.hp * thing.lives
+            self.atack_total += self.atack * thing.atack
+            self.defence_total += self.defence * thing.protection
 
 
 class Paladin(Person):
     def __init__(self, name):
         super().__init__(name)
         self.defence *= 2
+        self.hp *= 2
 
 
 class Warrior(Person):
