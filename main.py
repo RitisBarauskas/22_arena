@@ -5,7 +5,7 @@ from players import Warrior, Paladin
 from arena import Arena
 from things import Thing
 
-PLAYERS_COUNT = 5
+PLAYERS_COUNT = 10
 PLAYERS_NAMES = [f'Player{i}'for i in range(1, 21)]
 THINGS_NAMES = [f'Thing{i}'for i in range(1, 21)]
 

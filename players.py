@@ -5,7 +5,7 @@ class Person:
         self.things = []
         self.name = name
         self.attack = 50
-        self.defence = 50
+        self.defence = 30
         self.hp = 100
         self.hp_total = self.hp
         self.attack_total = self.attack
@@ -16,9 +16,9 @@ class Person:
 
     def set_total_skills(self):
         for thing in self.things:
-            self.hp_total += self.hp * thing.lives
-            self.attack_total += self.attack * thing.attack
-            self.defence_total += self.defence * thing.protection
+            self.hp_total += self.hp * thing.lives/100
+            self.attack_total += self.attack * thing.attack/100
+            self.defence_total += self.defence * thing.protection/100
 
     def get_defence(self, player1):
         damage = player1.attack_total - self.defence_total
